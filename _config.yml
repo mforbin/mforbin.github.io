@@ -21,7 +21,7 @@
 title: Front End Feild Notes
 email: martyvt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Web development is fun! Sometimes it's difficult, but whatever!.
+  Web development is fun! Sometimes it's difficult, but whatever!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
