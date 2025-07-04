@@ -1,0 +1,24 @@
+current directory: /Users/mcorbin/front-end-field-notes/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+/Users/mcorbin/.rbenv/versions/3.3.3/bin/ruby extconf.rb
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/mcorbin/front-end-field-notes/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250423-59074-ig120y sitelibdir\=./.gem.20250423-59074-ig120y clean
+
+current directory: /Users/mcorbin/front-end-field-notes/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250423-59074-ig120y sitelibdir\=./.gem.20250423-59074-ig120y
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+
+current directory: /Users/mcorbin/front-end-field-notes/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250423-59074-ig120y sitelibdir\=./.gem.20250423-59074-ig120y install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20250423-59074-ig120y/json/ext
+
+current directory: /Users/mcorbin/front-end-field-notes/vendor/bundle/ruby/3.3.0/gems/json-2.10.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250423-59074-ig120y sitelibdir\=./.gem.20250423-59074-ig120y clean
