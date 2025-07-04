@@ -374,6 +374,9 @@ table td {
 
 .page-heading {
   font-size: 32px;
+  background:rgba(255,255,255,0.85);
+  padding:1rem 2rem; 
+  border-radius:8px;
 }
 
 .post-list-heading {
