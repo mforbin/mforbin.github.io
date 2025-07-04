@@ -3,7 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Martin Corbin's Corner
+title: Martin Corbin
+subtitle: Front End Web Developer
 
 # Martin Corbin's Corner
 ## Of the internet
