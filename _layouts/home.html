@@ -1,31 +1,78 @@
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<div class="home" style="position:relative; min-height:100vh; overflow:hidden;">
-    <!-- Background Cinemagraph -->
-    <div style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:0; pointer-events:none; overflow:hidden;">
-        <iframe 
-            src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" 
-            frameborder="0" 
-            allowfullscreen 
-            allow="autoplay"
-            style="width:100vw; height:100vh; object-fit:cover; border:0; pointer-events:none;">
-        </iframe>
-    </div>
-    <!-- Overlay Content -->
-    <div class="container" style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh;">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .bg-container {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .bg-container iframe {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    object-fit: cover;
+    transform: scale(1.01); /* helps avoid 1px gaps */
+  }
+  .home {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  h1, h2, p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.3em;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+  }
+</style>
 
-        {%- if page.title -%}
-        <h1 style="font-family: montserrat, sans-serif; font-weight: 400; font-size: 3.3em; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">{{ page.title }}</h1>
-        {%- endif -%}
-        {%- if page.subtitle -%}
-        <h2 style="font-family: montserrat, sans-serif; font-weight: 400; font-size: 2em; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">{{ page.subtitle }}</h2>
-        {%- endif -%}
+<div class="home">
+  <!-- Background Cinemagraph -->
+  <div class="bg-container">
+    <iframe 
+      src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" 
+      allowfullscreen 
+      allow="autoplay">
+    </iframe>
+  </div>
 
-        <p style="font-family: montserrat, sans-serif; font-weight: 400; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">
-            Welcome to my corner of the web. I design and code great user experiences for websites that help boost conversions.
-        </p>
-    </div>
-</div> 
+  <!-- Overlay Content -->
+  <div class="container">
+    {%- if page.title -%}
+      <h1>{{ page.title }}</h1>
+    {%- endif -%}
+    {%- if page.subtitle -%}
+      <h2>{{ page.subtitle }}</h2>
+    {%- endif -%}
+    <p>
+      Welcome to my corner of the web. I design and code great user experiences for websites that help boost conversions.
+    </p>
+  </div>
+</div>
