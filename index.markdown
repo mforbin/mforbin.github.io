@@ -3,8 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Hello, I'm Martin
-subtitle: I do front end web development
+title: Hello, I'm <span class="highlight">Martin</span>
+subtitle: I'm a front end web development
 
 # Martin Corbin's Corner
 ## Of the internet
