@@ -1,3 +1,8 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <div class="home" style="position:relative; min-height:100vh; overflow:hidden;">
     <!-- Background Cinemagraph -->
     <div style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:0; pointer-events:none; overflow:hidden;">
@@ -13,13 +18,13 @@
     <div class="container" style="position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh;">
 
         {%- if page.title -%}
-        <h1 style="background:rgba(255,255,255,0.85); padding:1rem 2rem; border-radius:8px;">{{ page.title }}</h1>
+        <h1 style="font-family: montserrat, sans-serif; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">{{ page.title }}</h1>
         {%- endif -%}
         {%- if page.subtitle -%}
-        <h2 style="background:rgba(255,255,255,0.85); padding:1rem 2rem; border-radius:8px;">{{ page.subtitle }}</h2>
+        <h2 style="font-family: montserrat, sans-serif; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;"">{{ page.subtitle }}</h2>
         {%- endif -%}
 
-        <p style="background:rgba(255,255,255,0.85); padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">
+        <p style="font-family: montserrat, sans-serif; color: white; padding:1rem 2rem; border-radius:8px; max-width:600px; text-align:center;">
             This is the home page of my website. Here you can find various resources and information.
         </p>
     </div>
