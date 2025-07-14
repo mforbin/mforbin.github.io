@@ -4,7 +4,7 @@
 
 layout: home
 title: Hello, I'm <span class="highlight">Martin</span>
-subtitle: I'm a front end web developer
+subtitle: I do front end web development
 
 # Martin Corbin's Corner
 ## Of the internet
