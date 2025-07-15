@@ -20,6 +20,11 @@ sections:
     content: |
       - HTML, CSS, JavaScript
       - Liquid, PHP, Wordpress
+      - Responsive design (mobile-first)
+      - WordPress theme development
+      - Jekyll & static site generation
+      - Git / GitHub / CLI workflows
+      - UX-focused front-end design
       - Accessibility (WCAG), responsive design
 
 # Martin Corbin's Corner
