@@ -135,10 +135,14 @@ p {
 
   <div class="gradient-bg" style="min-height: 400px">
     <section class="quick-info">
-      <h2>What does a front end developer do? </h2>
-      <p>We build the parts of websites that users see and interact with, using HTML, CSS, and JavaScript. We focus on creating responsive, accessible, and visually appealing user interfaces that work across browsers and devices.</p>
-      <p>Smoother browsing, better performance, and more accessible interfaces are my goals. Better user experiences lead to happier users & increased conversions for online stores.</p>
-      <!--<p>Check out my work and let's build something amazing together!</p>  -->
+{%- if page.sections -%}
+  {%- for section in page.sections -%}
+    <h2>{{ section.heading }}</h2>
+    <div class="section-content">
+      {{ section.content | markdownify }}
+    </div>
+  {%- endfor -%}
+{%- endif -%}
     </section>
 </div>
 
