@@ -130,10 +130,12 @@ p {
         {%- if page.intro_paragraph -%}
             {{ page.intro_paragraph | markdownify }}
         {%- endif -%}
+
+        <a href="#about" class="cta-button">About Me</a>
     </div>  
   </div>
 
-  <div class="gradient-bg" style="min-height: 400px">
+  <div class="gradient-bg" id="about" style="min-height: 400px">
         {%- if page.sections -%}
         {%- for section in page.sections -%}
             <div class="section-content">
