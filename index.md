@@ -19,6 +19,7 @@ sections:
   - heading: Skills
     content: |
       - HTML, CSS, JavaScript
+      - Liquid, PHP, Wordpress
       - Accessibility (WCAG), responsive design
 
 # Martin Corbin's Corner
