@@ -149,10 +149,10 @@ p {
   <div class="about" id="about" style="min-height: 400px">
         {%- if page.sections -%}
         {%- for section in page.sections -%}
-            <div class="section-content">
+            <section class="section-content">
                 <h2>{{ section.heading }}</h2>
                 {{ section.content | markdownify }}
-            </div>
+            </section>
         {%- endfor -%}
         {%- endif -%}
 </div>
