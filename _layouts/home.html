@@ -64,7 +64,7 @@ h1, h2 {
 p {
     font-size: 1.18em;
 }
-.titles h1, .titles h2, .titles p {
+h1, h2, p {
   color: white;  
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -99,8 +99,8 @@ p {
         background-position: 0% 50%;
     }
 }
-.quick-info {
-  padding: 3rem 2rem 3rem 2rem;
+.section-content {
+  padding: 3rem 1rem 3rem 1rem;
   max-width: 800px;
   margin: auto;
 }
@@ -121,29 +121,24 @@ p {
   
   <div class="titles-wrapper">
     <div class="titles">
-      {%- if page.title -%}
-        <h1>{{ page.title }}</h1>
-      {%- endif -%}
-      {%- if page.subtitle -%}
-        <h2>{{ page.subtitle }}</h2>
-      {%- endif -%}
-      <p>
-        I enjoy designing & deploying engaging user experiences for the web
-      </p>
-    </div>
+        {%- if page.title -%}
+            <h1>{{ page.title }}</h1>
+        {%- endif -%}
+        {%- if page.subtitle -%}
+            <h2>{{ page.subtitle }}</h2>
+        {%- endif -%}
+    </div>  
   </div>
 
   <div class="gradient-bg" style="min-height: 400px">
-    <section class="quick-info">
-{%- if page.sections -%}
-  {%- for section in page.sections -%}
-    <h2>{{ section.heading }}</h2>
-    <div class="section-content">
-      {{ section.content | markdownify }}
-    </div>
-  {%- endfor -%}
-{%- endif -%}
-    </section>
+        {%- if page.sections -%}
+        {%- for section in page.sections -%}
+            <h2>{{ section.heading }}</h2>
+            <div class="section-content">
+            {{ section.content | markdownify }}
+            </div>
+        {%- endfor -%}
+        {%- endif -%}
     <p>{{ page.sections | inspect }}</p>
 </div>
 

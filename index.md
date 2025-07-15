@@ -4,7 +4,7 @@
 
 layout: home
 title: Hello, I'm <span class="highlight">Martin</span>
-subtitle: I do front end web development
+subtitle: I’m a front-end developer who creates responsive, user-friendly websites.
 
 sections:
   - heading: About Me
@@ -17,7 +17,6 @@ sections:
   - heading: Skills
     content: |
       - HTML, CSS, JavaScript
-      - React, Vue, and Alpine.js
       - Accessibility (WCAG), responsive design
 
 # Martin Corbin's Corner
