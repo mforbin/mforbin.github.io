@@ -85,51 +85,7 @@ p {
 .highlight {
   color: #F79F1F;
 }
-
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:relative;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-
-.bg3 {
-  animation-duration:5s;
-}
-
-.gradient-bg {
-  background-color:rgba(255,255,255,.8);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  left:50%;
-  padding:10vmin;
-  position:fixed;
-  text-align:center;
-  top:50%;
-  transform:translate(-50%, -50%);
-}
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-
-/* gradient background
+/* gradient background */
 .gradient-bg {
     background: linear-gradient(-45deg, #4B0E28, #7A1E3E, #B6361D, #F05E14);
     background-size: 400% 400%;
@@ -148,8 +104,7 @@ p {
     100% {
         background-position: 0% 50%;
     }
-} */
-
+}
 .section-content {
   padding: 3rem 1rem 3rem 1rem;
   max-width: 800px;
@@ -204,14 +159,7 @@ p {
     </div>  
   </div>
 
-
-
-
-
   <div class="gradient-bg" id="about" style="min-height: 400px">
-    <div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
         {%- if page.sections -%}
         {%- for section in page.sections -%}
             <div class="section-content">
