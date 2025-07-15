@@ -148,10 +148,10 @@ p {
         <a href="#about" class="cta-button">About Me &darr;</a>
     </div>  
   </div>
-
+  <div id="about">
         {%- if page.sections -%}
         {%- for section in page.sections -%}
-          <section class="about" id="about">
+          <section class="about">
             <div class="section-content">
                 <h2>{{ section.heading }}</h2>
                 {{ section.content | markdownify }}
@@ -159,6 +159,7 @@ p {
           </section>
         {%- endfor -%}
         {%- endif -%}
+  </div>      
 <!-- smooth scrolling -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
