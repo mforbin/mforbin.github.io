@@ -126,7 +126,7 @@ p {
             <h2>{{ page.subtitle }}</h2>
         {%- endif -%}
         {%- if page.intro_paragraph -%}
-            <p>{{ page.intro_paragraph | markdownify }}</p>
+            {{ page.intro_paragraph | markdownify }}
         {%- endif -%}
     </div>  
   </div>
