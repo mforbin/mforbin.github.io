@@ -4,7 +4,7 @@
 
 layout: home
 title: Hello, I'm <span class="highlight">Martin</span>
-subtitle: I’m a front-end developer who creates responsive, user-friendly websites.
+subtitle: I do front end web development
 
 sections:
   - heading: About Me
