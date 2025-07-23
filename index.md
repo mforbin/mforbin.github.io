@@ -19,13 +19,13 @@ sections:
   - heading: Skills
     content: |
       - HTML, CSS, JavaScript
-      - Liquid, PHP, Wordpress
       - Responsive design (mobile-first)
+      - UX-focused front-end design
+      - Accessibility (WCAG)
+      - Liquid, PHP, Wordpress
       - WordPress theme development
       - Jekyll & static site generation
-      - Git / GitHub / CLI workflows
-      - UX-focused front-end design
-      - Accessibility (WCAG), responsive design
+      - Git / GitHub
 
 # Martin Corbin's Corner
 ## Of the internet
