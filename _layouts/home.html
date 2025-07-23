@@ -130,6 +130,18 @@ section:nth-of-type(3) {
 section:nth-of-type(4) {
   background-color: #F05E14;
 }
+/* responsive 2 collumn ul */
+.skills-section ul {
+  columns: 2;
+  column-gap: 2em;
+  padding-left: 1em;
+}
+
+@media (max-width: 600px) {
+  .skills-section ul {
+    columns: 1;
+  }
+}
 </style>
 
 <div class="home">
