@@ -142,7 +142,6 @@ section:nth-of-type(4) {
 .section-content a::after {
   content: "";
   background: #F79F1F; /* changed from white */
-  color: black;
   width: calc(100%);
   height: 0;
   position: absolute;
@@ -152,7 +151,8 @@ section:nth-of-type(4) {
 }
 
 .section-content a:hover::after {
-  height: calc(100%)
+  height: calc(100%);
+  color: black; 
 }
 
 /* responsive 2 collumn ul */
