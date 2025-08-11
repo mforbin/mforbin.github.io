@@ -27,7 +27,7 @@ sections:
       - Jekyll & static site generation
       - Git / GitHub
 
-  - heading: Projects
+  - heading: Projects & Posts
     content: |
       - [Github: project code repositories](https://github.com/mforbin/)
       - [LinkedIn: professional networking](https://www.linkedin.com/in/martin-corbin-34587348/)
