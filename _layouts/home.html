@@ -132,7 +132,7 @@ section:nth-of-type(4) {
 }
 
 /* section links */
-.section-link a {
+.section-content a {
   display: block;
   margin: auto;
   padding: 1rem 1.25rem;
@@ -144,7 +144,7 @@ section:nth-of-type(4) {
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
   z-index: 1;
 }
-.section-link a:after {
+.section-content a:after {
   content: "";
   display: block;
   height: 2px;
@@ -157,10 +157,10 @@ section:nth-of-type(4) {
   transform-origin: bottom center;
   z-index: -1;
 }
-.section-link a:hover {
+.section-content a:hover {
   color: #2D2D2D;
 }
-.section-link a:hover:after {
+.section-content a:hover:after {
   right: 0;
   left: 0;
   height: 100%;
