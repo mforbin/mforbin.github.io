@@ -1,77 +1,275 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Front End Feild Notes | Web development is fun! Sometimes it’s difficult, but successfully solving problems is worth the effort.</title>
-<meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Front End Feild Notes" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Web development is fun! Sometimes it’s difficult, but successfully solving problems is worth the effort." />
-<meta property="og:description" content="Web development is fun! Sometimes it’s difficult, but successfully solving problems is worth the effort." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Front End Feild Notes" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Front End Feild Notes" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Web development is fun! Sometimes it’s difficult, but successfully solving problems is worth the effort.","headline":"Front End Feild Notes","name":"Front End Feild Notes","url":"http://localhost:4000/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Front End Feild Notes" /></head>
-<body><header class="site-header" role="banner">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Front End Feild Notes</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+<style>
+.home {
+  scroll-behavior: smooth;
+}
+#about {
+  scroll-margin-top: 160px;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+.bg-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bg-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vh;
+  border: none;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.home {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+.titles-wrapper {
+  height: 100vh; /* creates space for absolutely-positioned .titles */
+  position: relative;
+}
+.titles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1, h2, p, ul, li {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+h1, h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+p {
+  padding: 1rem 2rem;
+}
+.titles p {
+  font-size: 1.22em;
+}
+.titles h1, .titles h2, .titles p { 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.titles h1 {
+  font-size: 3.3rem;
+}
+.titles h2 {
+  font-size: 2.5rem;
+}
+.highlight {
+  color: #F79F1F;
+}
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Apr 23, 2025</span>
-        <h3>
-          <a class="post-link" href="/jekyll/update/2025/04/23/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li></ul>
+.row {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+.section-content {
+  padding: 3rem 1rem 3rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
 
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #F79F1F;
+  background-color: transparent;
+  color: #F79F1F;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-  <div class="wrapper">
+.cta-button:hover {
+  border-color: white;
+  color: white
+}
+/* bg colors for sections */
+section:nth-of-type(1) {
+  background-color: #CC4605;
+}
+section:nth-of-type(2) {
+  background-color: #A73600;
+}
+section:nth-of-type(3) {
+  background-color: #B6361D;
+}
+section:nth-of-type(4) {
+  background-color: #F05E14;
+}
 
-    <h2 class="footer-heading">Front End Feild Notes</h2>
+/* section button links */
+.section-content a {
+  text-decoration: none;
+  margin: 0 .2em;
+  position: relative;
+  color: white;
+} 
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Front End Feild Notes</li><li><a class="u-email" href="mailto:martyvt@gmail.com">martyvt@gmail.com</a></li></ul>
-      </div>
+.section-content a:before {
+  position: absolute;
+  margin: 0 auto;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #F79F1F;
+  content: '';
+  opacity: .3;
+  -webkit-transform: scaleX(.9);
+  transition-property: opacity, -webkit-transform;
+  transition-duration: .3s;
+}
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/mcorbin"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">mcorbin</span></a></li></ul>
-</div>
+.section-content a:hover:before {
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+}
 
-      <div class="footer-col footer-col-3">
-        <p>Web development is fun! Sometimes it&#39;s difficult, but successfully solving problems is worth the effort.</p>
-      </div>
-    </div>
 
+/*
+.section-content a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.section-content a:hover {
+  color: black; 
+}
+
+.section-content a::after {
+  content: "";
+  background: #F79F1F;
+  width: calc(100%);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.section-content a:hover::after {
+  height: calc(100%);
+}
+*/
+
+/* responsive 2 collumn ul */
+.section-content ul {
+  columns: 2;
+  column-gap: 2em;
+  padding-left: 1em;
+  list-style: none;
+}
+.section-content li {
+  line-height: 2.2em;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .section-content ul {
+    columns: 1;
+  }
+}
+</style>
+
+<div class="home">
+  <!-- Background Cinemagraph -->
+  <div class="bg-container">
+    <iframe 
+      src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" 
+      allowfullscreen 
+      allow="autoplay">
+    </iframe>
   </div>
 
-</footer>
-</body>
+  <!-- Overlay Content -->
+<div class="container">
+  
+  <div class="titles-wrapper">
+    <div class="titles"><h1>Hello, I'm <span class="highlight">Martin</span></h1><h2>I do front end web development</h2><p>I create responsive, user-friendly website experiences. I focus on clean code, accessibility, and performance.</p>
+<a href="#about" class="cta-button">About Me &darr;</a>
+    </div>  
+  </div>
+  <div id="about"><section class="row">
+            <div class="section-content">
+                <h2>As a front end web developer, what do you do?</h2>
+                <p>I build the parts of websites and web apps that users see and interact with, using HTML, CSS, and JavaScript. I focus on creating responsive, accessible, and visually appealing user interfaces that work across browsers and devices.</p>
 
-</html>
+            </div>
+          </section><section class="row">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+  <li>HTML, CSS, JavaScript</li>
+  <li>Responsive design (mobile-first)</li>
+  <li>UX-focused front-end design</li>
+  <li>Accessibility (WCAG)</li>
+  <li>Liquid, PHP, Wordpress</li>
+  <li>WordPress theme development</li>
+  <li>Jekyll &amp; static site generation</li>
+  <li>Git / GitHub</li>
+</ul>
+
+            </div>
+          </section><section class="row">
+            <div class="section-content">
+                <h2>Projects & Posts</h2>
+                <ul>
+  <li><a href="https://github.com/mforbin/">Github: project code repositories</a></li>
+  <li><a href="https://www.linkedin.com/in/martin-corbin-34587348/">LinkedIn: professional networking</a></li>
+  <li><a href="https://github.com/mforbin/">Matt’s Guitar Repair (single-page, static site)</a></li>
+</ul>
+
+            </div>
+          </section></div>      
+<!-- smooth scrolling -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
+
+
