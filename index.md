@@ -31,7 +31,7 @@ sections:
     content: |
       - [Github: project code repositories](https://github.com/mforbin/)
       - [LinkedIn: professional networking](https://www.linkedin.com/in/martin-corbin-34587348/)
-      - [Github: project code repositories](https://github.com/mforbin/)
+      - [Matt's Guitar Repair (single-page, static site)](https://github.com/mforbin/)
 
 #  - heading: Projects
 #    content: |
