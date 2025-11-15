@@ -4,24 +4,25 @@
 
 layout: home
 title: Hello, I'm <span class="highlight">Martin</span>
-subtitle: I do front end web development
+subtitle: I do web development
 
 intro_paragraph: >
-  I create responsive, user-friendly website experiences. I focus on clean code, accessibility, and performance.
+  I create websites for individuals and organizations, focusing on consistent, visually appealing design, usability, and high performance.
 
 sections:
-  - heading: As a front end web developer, what do you do?
+  - heading: As a web developer, what do you do?
     content: |
-      I build the parts of websites and web apps that users see and interact with, using HTML, CSS, and JavaScript. I focus on creating responsive, accessible, and visually appealing user interfaces that work across browsers and devices. 
+      I help clients turn their vision into websites that work. From single-page sites to complex online stores, I design and build functional, accessible, and fast websites tailored to your goals.
 
 #In my free time, I explore animation, UI microinteractions, and modern CSS tricks.
 
   - heading: Skills
     content: |
-      - HTML, CSS, JavaScript
       - Responsive design (mobile-first)
       - UX-focused front-end design
       - Accessibility (WCAG)
+      - Search Engine Optimization (SEO)
+      - HTML, CSS, JavaScript
       - Liquid, PHP, Wordpress
       - WordPress theme development
       - Jekyll & static site generation
