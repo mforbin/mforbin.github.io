@@ -119,39 +119,13 @@ p {
 }
 
 /* FIXED FULLSCREEN BACKGROUND */
-.bg-fixed {
+#myVideo {
   position: fixed;
-  inset: 0;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-
-.bg-fixed iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: none;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  
-  /* NEW DEFAULT: cover width (fixes desktop!) */
-  width: 100vw;
-  height: 56.25vw; /* 16:9 relative height */
-  min-height: 100vh; /* ensures vertical coverage */
-}
-
-/* For tall screens (mobile portrait, some tablets) */
-@media (max-aspect-ratio: 3/4) {
-  .bg-fixed iframe {
-    width: 133vh;    /* scale width based on height */
-    height: 100vh;   /* full height always */
-    min-width: 100vw;
-  }
-}
-
-
 
 /* bg colors for sections */
 section:nth-of-type(1) {
@@ -245,13 +219,9 @@ section:nth-of-type(4) {
 
 <div class="home">
 <!-- Fixed Background -->
-<div class="bg-fixed">
-  <iframe 
-    src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false"
-    allowfullscreen
-    allow="autoplay">
-  </iframe>
-</div>
+ <video autoplay muted loop id="myVideo">
+  <source src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" type="video/mp4">
+</video>
 
 
   <!-- Overlay Content -->
