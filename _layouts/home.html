@@ -121,43 +121,36 @@ p {
 /* FIXED FULLSCREEN BACKGROUND */
 .bg-fixed {
   position: fixed;
-  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  inset: 0;
   overflow: hidden;
-  z-index: -1;              /* behind all content */
-  pointer-events: none;     /* allows clicking through */
+  z-index: -1;
+  pointer-events: none;
 }
 
 .bg-fixed iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-
-  /* This combo forces it to scale like background-size: cover */
-  width: 100vw;
-  height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-
-  transform: translate(-50%, -50%);
   border: none;
   pointer-events: none;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  
+  /* NEW DEFAULT: cover width (fixes desktop!) */
+  width: 100vw;
+  height: 56.25vw; /* 16:9 relative height */
+  min-height: 100vh; /* ensures vertical coverage */
 }
 
-/* Extra coverage on smaller screens (fixes tall/narrow mobile sizes) */
-@media (max-width: 900px) {
+/* For tall screens (mobile portrait, some tablets) */
+@media (max-aspect-ratio: 3/4) {
   .bg-fixed iframe {
-    min-width: 150%;
-    min-height: 150%;
+    width: 133vh;    /* scale width based on height */
+    height: 100vh;   /* full height always */
+    min-width: 100vw;
   }
 }
 
-@media (max-width: 600px) {
-  .bg-fixed iframe {
-    min-width: 200%;
-    min-height: 200%;
-  }
-}
 
 
 /* bg colors for sections */
