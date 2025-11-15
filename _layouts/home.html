@@ -159,6 +159,35 @@ section:nth-of-type(4) {
   -webkit-transform: scaleX(1);
 }
 
+/* Ensure background iframe always covers the screen */
+.bg-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
+  object-fit: cover; /* Helps modern browsers crop the video properly */
+}
+
+/* Small screens need stronger coverage */
+@media (max-width: 900px) {
+  .bg-container iframe {
+    min-width: 150%;
+    min-height: 150%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-container iframe {
+    min-width: 200%;
+    min-height: 200%;
+  }
+}
 
 /*
 .section-content a {
