@@ -117,6 +117,49 @@ p {
   border-color: white;
   color: white
 }
+
+/* FIXED FULLSCREEN BACKGROUND */
+.bg-fixed {
+  position: fixed;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  overflow: hidden;
+  z-index: -1;              /* behind all content */
+  pointer-events: none;     /* allows clicking through */
+}
+
+.bg-fixed iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* This combo forces it to scale like background-size: cover */
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
+}
+
+/* Extra coverage on smaller screens (fixes tall/narrow mobile sizes) */
+@media (max-width: 900px) {
+  .bg-fixed iframe {
+    min-width: 150%;
+    min-height: 150%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bg-fixed iframe {
+    min-width: 200%;
+    min-height: 200%;
+  }
+}
+
+
 /* bg colors for sections */
 section:nth-of-type(1) {
   background-color: #CC4605;
@@ -159,35 +202,6 @@ section:nth-of-type(4) {
   -webkit-transform: scaleX(1);
 }
 
-/* Ensure background iframe always covers the screen */
-.bg-container iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  border: none;
-  pointer-events: none;
-  object-fit: cover; /* Helps modern browsers crop the video properly */
-}
-
-/* Small screens need stronger coverage */
-@media (max-width: 900px) {
-  .bg-container iframe {
-    min-width: 150%;
-    min-height: 150%;
-  }
-}
-
-@media (max-width: 600px) {
-  .bg-container iframe {
-    min-width: 200%;
-    min-height: 200%;
-  }
-}
 
 /*
 .section-content a {
@@ -237,14 +251,15 @@ section:nth-of-type(4) {
 </style>
 
 <div class="home">
-  <!-- Background Cinemagraph -->
-  <div class="bg-container">
-    <iframe 
-      src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" 
-      allowfullscreen 
-      allow="autoplay">
-    </iframe>
-  </div>
+<!-- Fixed Background -->
+<div class="bg-fixed">
+  <iframe 
+    src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false"
+    allowfullscreen
+    allow="autoplay">
+  </iframe>
+</div>
+
 
   <!-- Overlay Content -->
 <div class="container">
