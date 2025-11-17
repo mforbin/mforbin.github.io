@@ -169,27 +169,32 @@ section:nth-of-type(4) {
   -webkit-transform: scaleX(1);
 }
 
-/* Container behind everything */
+/* Fixed Fullscreen Background Video */
 .bg-fixed {
-  position: fixed;     /* fix it to viewport */
-  inset: 0;            /* top:0; right:0; bottom:0; left:0 */
-  z-index: -1;         /* behind content */
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   overflow: hidden;
-  pointer-events: none; /* allow clicks to pass through */
+  pointer-events: none;
 }
 
-/* Video itself */
 .bg-fixed video {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100vw;
   height: 100vh;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;       /* fills container, crops as needed */
+  object-fit: cover;
   transform: translate(-50%, -50%);
 }
+
+/* Overlay */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* black at 40% opacity */
+}
+
 
 
 
@@ -246,7 +251,9 @@ section:nth-of-type(4) {
   <video autoplay muted loop playsinline>
     <source src="{{ '/assets/videos/geese.mp4' | relative_url }}" type="video/mp4">
   </video>
+  <div class="video-overlay"></div>
 </div>
+
 
 
   <!-- Overlay Content -->

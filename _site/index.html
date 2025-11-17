@@ -117,6 +117,16 @@ p {
   border-color: white;
   color: white
 }
+
+/* FIXED FULLSCREEN BACKGROUND */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* bg colors for sections */
 section:nth-of-type(1) {
   background-color: #CC4605;
@@ -158,6 +168,34 @@ section:nth-of-type(4) {
   opacity: 1;
   -webkit-transform: scaleX(1);
 }
+
+/* Fixed Fullscreen Background Video */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-fixed video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Overlay */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* black at 40% opacity */
+}
+
+
 
 
 /*
@@ -208,37 +246,39 @@ section:nth-of-type(4) {
 </style>
 
 <div class="home">
-  <!-- Background Cinemagraph -->
-  <div class="bg-container">
-    <iframe 
-      src="https://media.flixel.com/cinemagraph/q3llhdct37n2tcfomkth?hd=false" 
-      allowfullscreen 
-      allow="autoplay">
-    </iframe>
-  </div>
+<!-- Fixed Fullscreen Background Video -->
+<div class="bg-fixed">
+  <video autoplay muted loop playsinline>
+    <source src="/assets/videos/geese.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+</div>
+
+
 
   <!-- Overlay Content -->
 <div class="container">
   
   <div class="titles-wrapper">
-    <div class="titles"><h1>Hello, I'm <span class="highlight">Martin</span></h1><h2>I do front end web development</h2><p>I create responsive, user-friendly website experiences. I focus on clean code, accessibility, and performance.</p>
+    <div class="titles"><h1>Hello, I'm <span class="highlight">Martin</span></h1><h2>I do web development</h2><p>I create websites for individuals and organizations, focusing on consistent, visually appealing design, usability, and high performance.</p>
 <a href="#about" class="cta-button">About Me &darr;</a>
     </div>  
   </div>
   <div id="about"><section class="row">
             <div class="section-content">
-                <h2>As a front end web developer, what do you do?</h2>
-                <p>I build the parts of websites and web apps that users see and interact with, using HTML, CSS, and JavaScript. I focus on creating responsive, accessible, and visually appealing user interfaces that work across browsers and devices.</p>
+                <h2>As a web developer, what do you do?</h2>
+                <p>I help clients turn their vision into websites that work. From single-page sites to complex online stores, I design and build functional, accessible, and fast websites tailored to your goals.</p>
 
             </div>
           </section><section class="row">
             <div class="section-content">
                 <h2>Skills</h2>
                 <ul>
-  <li>HTML, CSS, JavaScript</li>
   <li>Responsive design (mobile-first)</li>
   <li>UX-focused front-end design</li>
   <li>Accessibility (WCAG)</li>
+  <li>Search Engine Optimization (SEO)</li>
+  <li>HTML, CSS, JavaScript</li>
   <li>Liquid, PHP, Wordpress</li>
   <li>WordPress theme development</li>
   <li>Jekyll &amp; static site generation</li>
