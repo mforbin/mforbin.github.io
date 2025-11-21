@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Front End Feild Notes
+title: Martin Corbin, Web Developer
 email: martyvt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Web development is fun! Sometimes it's difficult, but so what?
@@ -26,6 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  mcorbin
+imagesurl: "/assets/img"
 
 # Build settings
 theme: minima

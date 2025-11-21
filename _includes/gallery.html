@@ -1,0 +1,39 @@
+<div class="image-gallery">
+  {% assign sorted = site.static_files | sort: 'name' %}
+  {% for file in sorted %}
+    {% if file.path contains include.folder %}
+      {% assign ext = file.extname | downcase %}
+      {% if ext == '.png' or ext == '.jpg' or ext == '.jpeg' or ext == '.gif' %}
+        {% assign filenameparts = file.path | split: "/" %}
+        {% assign filename = filenameparts | last | replace: file.extname, "" %}
+        {% assign caption = "" %}
+
+        {%- assign data_caption = site.data.gallery_captions[filename] -%}
+        {%- if include.captions[filename] -%}
+          {%- assign caption = include.captions[filename] -%}
+        {%- elsif data_caption -%}
+          {%- assign caption = data_caption -%}
+        {%- else -%}
+          {%- assign caption = filename | replace: "-", " " | replace: "_", " " | capitalize -%}
+        {%- endif -%}
+
+        <figure class="box">
+          <a 
+            href="{{ file.path | relative_url }}" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="{{ caption }}"
+          >
+            <img 
+              src="{{ file.path | relative_url }}" 
+              alt="{{ caption }}"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">{{ caption }}</figcaption>
+        </figure>
+
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

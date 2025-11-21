@@ -2,6 +2,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 
 <style>
 .home {
@@ -58,18 +60,21 @@ body, html {
   flex-direction: column;
   align-items: center;
 }
-h1, h2, p, ul, li {
+h1, h2, h3, p, ul, li {
   font-family: 'Montserrat', sans-serif;
   color: white;
 }
 a {
   font-family: 'Montserrat', sans-serif;
 }
-h1, h2 {
-  padding: 0;
+h1, h2, h3 {
+  padding-top: 0;
   margin: 0;
   font-weight: 400;
   text-align: center;
+}
+h2, h3 {
+  margin-top: 1.4rem;
 }
 p {
   padding: 1rem 2rem;
@@ -84,12 +89,18 @@ p {
   font-size: 3.3rem;
 }
 .titles h2 {
+  font-size: 2.9rem;
+}
+.titles h3 {
   font-size: 2.5rem;
 }
 .highlight {
   color: #F79F1F;
 }
-
+hr {
+  color: #ad3b03;
+  margin: 3em 0;
+}
 .row {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -196,36 +207,47 @@ section:nth-of-type(4) {
   background-color: rgba(0, 0, 0, 0.6); /* black at 40% opacity */
 }
 
+/* Gallery styles */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 1200px;
+  margin: .5rem auto 0;
+}
 
+.box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+}
 
-
-/*
-.section-content a {
+.img-gallery {
   display: block;
-  color: white;
-  text-decoration: none;
-  position: relative;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
-.section-content a:hover {
-  color: black; 
+.img-gallery:hover {
+  transform: scale(1.05);
 }
 
-.section-content a::after {
-  content: "";
-  background: #F79F1F;
-  width: calc(100%);
-  height: 0;
-  position: absolute;
-  bottom: -4px;
-  left: -10px;
-  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+/* Image caption styling */
+.image-caption {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: rgba(255,255,255,0.95);
+  background: rgba(0,0,0,0.12);
 }
 
-.section-content a:hover::after {
-  height: calc(100%);
+@media (max-width: 600px) {
+  .image-caption { font-size: 0.85rem; }
+  .img-gallery { height: 140px; }
 }
-*/
 
 /* responsive 2 collumn ul */
 .section-content ul {
@@ -269,8 +291,7 @@ section:nth-of-type(4) {
             <div class="section-content">
                 <h2>As a web developer, what do you do?</h2>
                 <p>I help clients turn their vision into websites that work. From single-page sites to complex online stores, I design and build functional, accessible, and fast websites tailored to your goals.</p>
-
-            </div>
+</div>
           </section><section class="row">
             <div class="section-content">
                 <h2>Skills</h2>
@@ -285,8 +306,7 @@ section:nth-of-type(4) {
   <li>Jekyll &amp; static site generation</li>
   <li>Git / GitHub</li>
 </ul>
-
-            </div>
+</div>
           </section><section class="row">
             <div class="section-content">
                 <h2>Projects & Posts</h2>
@@ -296,7 +316,281 @@ section:nth-of-type(4) {
   <li><a href="https://github.com/mforbin/">Matt’s Guitar Repair (single-page, static site)</a></li>
 </ul>
 
-            </div>
+<hr />
+
+<h2 id="past-projects">Past Projects</h2>
+
+                  <div class="image-gallery">
+  
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/01-vws-main-nav.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Main navigation design"
+          >
+            <img 
+              src="/assets/img/01-vws-main-nav.png" 
+              alt="Vermont Woods Studios - Main navigation design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Main navigation design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/02-vws-product-list-with-filters.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Product list with filters"
+          >
+            <img 
+              src="/assets/img/02-vws-product-list-with-filters.png" 
+              alt="Vermont Woods Studios - Product list with filters"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Product list with filters</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/03-vws-product-page.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Product page design"
+          >
+            <img 
+              src="/assets/img/03-vws-product-page.png" 
+              alt="Vermont Woods Studios - Product page design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Product page design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/04-vws-product-page-2.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Product descriptions"
+          >
+            <img 
+              src="/assets/img/04-vws-product-page-2.png" 
+              alt="Vermont Woods Studios - Product descriptions"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Product descriptions</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/05-vws-showroom.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Showroom page heading"
+          >
+            <img 
+              src="/assets/img/05-vws-showroom.png" 
+              alt="Vermont Woods Studios - Showroom page heading"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Showroom page heading</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/06-vws-decor.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Home decor landing page"
+          >
+            <img 
+              src="/assets/img/06-vws-decor.png" 
+              alt="Vermont Woods Studios - Home decor landing page"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Home decor landing page</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/07-vws-press-page.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Vermont Woods Studios - Press page masonry layout"
+          >
+            <img 
+              src="/assets/img/07-vws-press-page.png" 
+              alt="Vermont Woods Studios - Press page masonry layout"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Vermont Woods Studios - Press page masonry layout</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/08-families-first-home.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Families First - Homepage design"
+          >
+            <img 
+              src="/assets/img/08-families-first-home.png" 
+              alt="Families First - Homepage design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Families First - Homepage design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/09-amys-macs-home.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Amy's Macs - Homepage design"
+          >
+            <img 
+              src="/assets/img/09-amys-macs-home.png" 
+              alt="Amy's Macs - Homepage design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Amy's Macs - Homepage design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/10-amys-macs-weddings.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Amy's Macs - Weddings page design"
+          >
+            <img 
+              src="/assets/img/10-amys-macs-weddings.png" 
+              alt="Amy's Macs - Weddings page design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Amy's Macs - Weddings page design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+      
+      
+        
+        
+        <figure class="box">
+          <a 
+            href="/assets/img/11-amys-macs-catering.png" 
+            class="glightbox"
+            data-gallery="gallery"
+            data-title="Amy's Macs - Catering page design"
+          >
+            <img 
+              src="/assets/img/11-amys-macs-catering.png" 
+              alt="Amy's Macs - Catering page design"
+              class="img-gallery"
+            />
+          </a>
+          <figcaption class="image-caption">Amy's Macs - Catering page design</figcaption>
+        </figure>
+
+      
+    
+  
+    
+  
+</div>
+</div>
           </section></div>      
 <!-- smooth scrolling -->
 <script>
@@ -312,5 +606,14 @@ section:nth-of-type(4) {
     });
   });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+  });
+</script>
+
 
 

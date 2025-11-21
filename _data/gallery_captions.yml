@@ -1,0 +1,17 @@
+# Map image filename (without extension) -> caption
+# Example:
+# vermont-woods-studio-1: "Vermont Woods Studio — Living Room"
+# chair-model-a: "Chair Model A (maple)"
+
+# Add your captions below using the filename (no extension) as the key.
+01-vws-main-nav: "Vermont Woods Studios - Main navigation design"
+02-vws-product-list-with-filters: "Vermont Woods Studios - Product list with filters"
+03-vws-product-page: "Vermont Woods Studios - Product page design"
+04-vws-product-page-2: "Vermont Woods Studios - Product descriptions"
+05-vws-showroom: "Vermont Woods Studios - Showroom page heading"
+06-vws-decor: "Vermont Woods Studios - Home decor landing page"
+07-vws-press-page: "Vermont Woods Studios - Press page masonry layout"
+08-families-first-home: "Families First - Homepage design"
+09-amys-macs-home: "Amy's Macs - Homepage design"
+10-amys-macs-weddings: "Amy's Macs - Weddings page design"
+11-amys-macs-catering: "Amy's Macs - Catering page design"
