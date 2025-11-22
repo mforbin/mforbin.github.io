@@ -101,6 +101,9 @@ hr {
   color: #ad3b03;
   margin: 3em 0;
 }
+.txt-center {
+  text-align: center;
+}
 .row {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -266,6 +269,101 @@ section:nth-of-type(4) {
     columns: 1;
   }
 }
+
+/* Contact Form Container */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Inputs and Textareas */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.4rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+/* Focus state */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #F79F1F;
+  background-color: rgba(0,0,0,0.45);
+}
+
+/* Textarea resizing */
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit Button */
+form input[type="submit"],
+form button {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background-color: transparent;
+  border: 2px solid #F79F1F;
+  color: #F79F1F;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+form input[type="submit"]:hover,
+form button:hover {
+  background-color: #F79F1F;
+  color: #000;
+}
+
+/* Placeholder color */
+form ::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Form message styling (optional) */
+.form-success,
+.form-error {
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-success {
+  background-color: rgba(0, 180, 60, 0.3);
+  color: #6fff9f;
+}
+
+.form-error {
+  background-color: rgba(200, 20, 20, 0.3);
+  color: #ffbdbd;
+}
+
 </style>
 
 <div class="home">
@@ -312,7 +410,13 @@ section:nth-of-type(4) {
           </section>
         {%- endfor -%}
         {%- endif -%}
-  </div>      
+  </div> 
+  <div id="contact">
+    <div class="section-content">
+      <h2>Contact Me</h2>
+      {% include contact-form.html %}
+    </div> 
+  </div>    
 <!-- smooth scrolling -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -334,6 +438,23 @@ section:nth-of-type(4) {
     touchNavigation: true,
     loop: true,
   });
+</script>
+
+<script src="assets/js/three.r134.min.js"></script>
+<script src="assets/js/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#contact",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x9d312e,
+  backgroundColor: 0x7074a
+})
 </script>
 
 
