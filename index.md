@@ -13,18 +13,21 @@ sections:
   - heading: As a web developer, what do you do?
     content: |
       I help clients turn their vision into websites that work. From single-page sites to complex online stores, I design and build functional, accessible, and fast websites tailored to your goals.
+      - Responsive Design (mobile-first)
+      - UX-focused Front-End Design
+      - Accessibility Compliance (WCAG)
+      - Search Engine Optimization (SEO)
+      - Site Speed and Performace Audits
+      - Web Analytics Tracking   
 
 #In my free time, I explore animation, UI microinteractions, and modern CSS tricks.
 
   - heading: Skills
-    content: |
-      - Responsive design (mobile-first)
-      - UX-focused front-end design
-      - Accessibility (WCAG)
-      - Search Engine Optimization (SEO)
+    content: |   
       - HTML, CSS, JavaScript
-      - Liquid, PHP, Wordpress
-      - WordPress theme development
+      - Liquid, PHP
+      - JSON Schema      
+      - WordPress, Shopify
       - Jekyll & static site generation
       - Git / GitHub
 
