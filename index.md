@@ -44,6 +44,8 @@ sections:
 
 #  - heading: Projects
 #    content: |
+#      - [Vermont Woods Studios](https://vermontwoodsstudios.com/)
+#      - [iTech Resource](https://itech-resource.com/)
 #      - [Github: project code repositories](https://github.com/mforbin/)
 #      - [LinkedIn: professional networking](https://www.linkedin.com/in/martin-corbin-34587348/)
 #      - [Github: project code repositories](https://github.com/mforbin/)
