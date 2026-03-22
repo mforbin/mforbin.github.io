@@ -33,11 +33,12 @@ sections:
 
   - heading: Projects & Posts
     content: |
-      - [Vermont Woods Studios](https://vermontwoodsstudios.com/)
-      - [iTech Resource](https://itech-resource.com/)
-      - [Github: project code repositories](https://github.com/mforbin/)
-      - [LinkedIn: professional networking](https://www.linkedin.com/in/martin-corbin-34587348/)
-      - [Matt's Guitar Repair (single-page, static site)](https://github.com/mforbin/)
+      - <a href="https://vermontwoodsstudios.com/" target="_blank">Vermont Woods Studios</a>
+      - <a href="https://itech-resource.com/" target="_blank">iTech Resource</a>
+      - [Github: project code repositories]()
+      - <a href="https://github.com/mforbin/" target="_blank">Github: project code repositories</a>
+      - <a href="https://www.linkedin.com/in/martin-corbin-34587348/" target="_blank">LinkedIn: professional networking</a>
+      - <a href="https://github.com/mforbin/" target="_blank">LMatt's Guitar Repair (single-page, static site)</a>
 
 
       ## Past Projects
