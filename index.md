@@ -4,10 +4,10 @@
 
 layout: home
 title: Hello, I'm <span class="highlight">Martin</span>
-subtitle: I do web development
+subtitle: I am a web developer & UX-focused problem solver
 
 intro_paragraph: >
-  I create websites for individuals and organizations, focusing on consistent, visually appealing design, usability, and high performance.
+  I create websites for individuals and organizations. I focus on building clear, user-friendly experiences that prioritize usability and performance.
 
 sections:
   - heading: As a web developer, what do you do?
