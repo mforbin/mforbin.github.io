@@ -60,6 +60,17 @@ body, html {
   flex-direction: column;
   align-items: center;
 }
+.titles h1 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+.titles h2 {
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.5rem;
+}
 h1, h2, h3, p, ul, li {
   font-family: 'Montserrat', sans-serif;
   color: white;
@@ -85,14 +96,12 @@ p {
 .titles h1, .titles h2, .titles p { 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
-.titles h1 {
-  font-size: 3.3rem;
-}
-.titles h2 {
-  font-size: 2.9rem;
-}
-.titles h3 {
-  font-size: 2.5rem;
+@media (max-width: 768px) {
+  .titles {
+    padding: 0;        /* reduce side spacing */
+    margin: 0 auto;         /* center it cleanly */
+    width: 90%;       /* allow it to shrink on smaller screens */
+  }
 }
 .highlight {
   color: #F79F1F;
@@ -246,6 +255,18 @@ section:nth-of-type(4) {
   text-align: center;
   color: rgba(255,255,255,0.95);
   background: rgba(0,0,0,0.12);
+}
+
+.titles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px; /* optional, keeps it readable on desktop */ 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 600px) {

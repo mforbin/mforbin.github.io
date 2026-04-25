@@ -36,7 +36,7 @@ sections:
       - <a href="https://vermontwoodsstudios.com/" target="_blank">Vermont Woods Studios</a>
       - <a href="https://itech-resource.com/" target="_blank">iTech Resource</a>
       - <a href="https://www.linkedin.com/in/martin-corbin-34587348/" target="_blank">LinkedIn: professional networking</a>
-      - <a href="https://github.com/mforbin/" target="_blank">Matt's Guitar Repair (single-page, static site)</a>
+      - <a href="https://mattsguitarrepair.com/" target="_blank">Matt's Guitar Repair (single-page, static site)</a>
 
 
       ## Past Projects
